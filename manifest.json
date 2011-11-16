@@ -1,0 +1,11 @@
+{
+	"name": "Middle Click Tab",
+	"description": "Stop Backspace returning to previous page.",
+	"version": "0.0",
+	"content_scripts": [
+		{
+			"matches": ["http://*/*", "https://*/*"],
+			"js": ["jquery.js", "content.js"]
+		}
+	]
+}
