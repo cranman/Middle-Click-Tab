@@ -1,6 +1,6 @@
 {
 	"name": "Middle Click Tab",
-	"description": "Stop Backspace returning to previous page.",
+	"description": "Use Middle Click to open links in new background tabs",
 	"version": "0.1",
 	"background_page": "background.html",
 	"content_scripts": [
