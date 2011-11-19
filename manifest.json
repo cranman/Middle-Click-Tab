@@ -1,7 +1,8 @@
 {
 	"name": "Middle Click Tab",
 	"description": "Stop Backspace returning to previous page.",
-	"version": "0.0",
+	"version": "0.1",
+	"background_page": "background.html",
 	"content_scripts": [
 		{
 			"matches": ["http://*/*", "https://*/*"],
