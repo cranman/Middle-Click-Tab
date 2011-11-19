@@ -4,5 +4,6 @@ $('a').click(function (b) {
 		tab.url = $(this).attr("href");
 
 		chrome.extension.sendRequest(tab);
+		return false;		// Stop current page from also loading link
 	}
 });
