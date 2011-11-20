@@ -1,0 +1,9 @@
+<html>
+	<script>
+		chrome.extension.onRequest.addListener(function(url, sender, sendResponse) {
+			url.selected = false;		// Open new tab in background
+			chrome.tabs.create(url);
+			sendResponse();
+		});
+	</script>
+</html>
