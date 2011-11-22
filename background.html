@@ -1,7 +1,9 @@
 <html>
 	<script>
 		chrome.extension.onRequest.addListener(function(url, sender, sendResponse) {
-			url.selected = false;		// Open new tab in background
+		    console.log(sender);
+			url.selected = false;			// Open new tab in background
+			url.index = sender.tab.index + 1;	// Open tab to the right of current tab
 			chrome.tabs.create(url);
 			sendResponse();
 		});
