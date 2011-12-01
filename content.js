@@ -17,12 +17,15 @@ function parseUrl(tab) {
 			tab.url = window.location.protocol + "//" + window.location.hostname + tab.url;
 		} else if (/.*\/$/.test(window.location.href)) {
 			// else if starts with any other character then if ends in / append to current level
-			tab.url = window.location.href + "/" + tab.url;
-		} else {
-			// else lose last bit until / and append to current level
+			tab.url = window.location.href + tab.url;
+		} else if (/^.*[^/]+\.[^./]+$/.test(window.location.href)) {
+			// else if ends in a file, lose last bit until / and append to current level
 			var str = window.location.href.split("/");
 			str.pop();
 			tab.url = str.join("/") + "/" + tab.url;
+		} else {
+			// else doesn't end in / so append / and relative url
+			tab.url = window.location.href + "/" + tab.url;
 		}
 	}
 
