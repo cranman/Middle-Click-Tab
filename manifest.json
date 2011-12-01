@@ -1,7 +1,7 @@
 {
 	"name": "Middle Click Tab",
 	"description": "Use Middle Click to open links in new background tabs",
-	"version": "0.2",
+	"version": "1.0",
 	"background_page": "background.html",
 	"content_scripts": [
 		{
